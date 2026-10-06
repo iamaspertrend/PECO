@@ -1,0 +1,182 @@
+<section class="peco-hero">
+  <div class="peco-glow"></div>
+
+  <div class="peco-content">
+    <p class="peco-label">A NEW WAY TO WRITE</p>
+
+    <h1>PECO</h1>
+
+    <h2>Write today.<br><span>Leave less behind.</span></h2>
+
+    <p class="peco-subtitle">
+      An eco-conscious pen designed with its journey beyond the page in mind.
+    </p>
+
+    <a href="#launch" class="peco-button">COMING SOON</a>
+  </div>
+
+  <div class="peco-leaf leaf-1">🌿</div>
+  <div class="peco-leaf leaf-2">🍃</div>
+</section>
+
+<style>
+  .peco-hero {
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 40%, #174b3b 0%, #0b2922 35%, #061613 75%);
+    color: #f4ead7;
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+  }
+
+  .peco-content {
+    position: relative;
+    z-index: 3;
+    animation: fadeUp 1.2s ease forwards;
+  }
+
+  .peco-label {
+    letter-spacing: 5px;
+    font-size: 12px;
+    opacity: .75;
+    margin-bottom: 20px;
+  }
+
+  .peco-hero h1 {
+    font-size: clamp(80px, 18vw, 190px);
+    line-height: .8;
+    letter-spacing: 12px;
+    margin: 0;
+    font-weight: 800;
+    background: linear-gradient(135deg, #f4ead7, #c9a85d, #f4ead7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+  }
+
+  .peco-hero h2 {
+    font-size: clamp(28px, 5vw, 58px);
+    line-height: 1.05;
+    margin: 35px 0 20px;
+    font-weight: 500;
+  }
+
+  .peco-hero h2 span {
+    color: #c9a85d;
+  }
+
+  .peco-subtitle {
+    max-width: 520px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: .8;
+  }
+
+  .peco-button {
+    display: inline-block;
+    padding: 15px 32px;
+    border: 1px solid #c9a85d;
+    border-radius: 50px;
+    color: #f4ead7;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: .3s ease;
+  }
+
+  .peco-button:hover {
+    background: #c9a85d;
+    color: #061613;
+    transform: translateY(-3px);
+  }
+
+  .peco-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #1c7655;
+    filter: blur(130px);
+    opacity: .25;
+    animation: pulse 5s infinite alternate;
+  }
+
+  .peco-leaf {
+    position: absolute;
+    font-size: 55px;
+    opacity: .25;
+  }
+
+  .leaf-1 {
+    left: 8%;
+    bottom: 15%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .leaf-2 {
+    right: 8%;
+    top: 18%;
+    animation: float 7s ease-in-out infinite reverse;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shine {
+    0%,100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.35);
+    }
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(.8);
+      opacity: .15;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: .3;
+    }
+  }
+
+  @keyframes float {
+    0%,100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-25px) rotate(8deg);
+    }
+  }
+
+  @media(max-width:600px) {
+    .peco-hero {
+      min-height: 85vh;
+    }
+
+    .peco-hero h1 {
+      letter-spacing: 5px;
+    }
+
+    .peco-subtitle {
+      font-size: 14px;
+    }
+  }
+</style>
